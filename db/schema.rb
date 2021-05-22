@@ -10,6 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_05_22_043132) do
+
+  create_table "cultivation_records", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.float "soil_humidity", null: false, comment: "土壌湿度"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end

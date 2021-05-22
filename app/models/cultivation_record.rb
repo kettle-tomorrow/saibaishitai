@@ -1,0 +1,2 @@
+class CultivationRecord < ApplicationRecord
+end
