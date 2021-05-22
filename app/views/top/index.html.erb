@@ -7,11 +7,5 @@
     <th>土壌湿度</th>
     <th>記録日時</th>
   </tr>
-  <% @cultivation_records.each do |cultivation_record| %>
-    <tr>
-      <th><%= cultivation_record.id %></th>
-      <th><%= cultivation_record.soil_humidity %></th>
-      <th><%= l cultivation_record.created_at %></th>
-    </tr>
-  <% end %>
+  <%= render(CultivationRecordComponent.with_collection(@cultivation_records)) %>
 </table>
