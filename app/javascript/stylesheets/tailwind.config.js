@@ -2,7 +2,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+         'yasai': "url('/assets/yasai.jpg')",
+      })
+    },
   },
   variants: {
     extend: {},
