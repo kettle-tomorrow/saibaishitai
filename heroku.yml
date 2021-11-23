@@ -1,6 +1,6 @@
 setup:
   addons:
-    - plan: cleardb:ignite
+    - plan: cleardb
 build:
   docker:
     web: ./heroku/Dockerfile
