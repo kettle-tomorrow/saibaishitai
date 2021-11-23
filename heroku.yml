@@ -8,7 +8,7 @@ build:
     RAILS_ENV: development
 release:
   command:
-    - bundle exec rake db:migrate
+    - ./deployment-tasks.sh
   image: web
 run:
   web: bundle exec puma -C config/puma.rb
