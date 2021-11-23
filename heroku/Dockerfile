@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN npm install -g yarn
 
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
+COPY ../Gemfile /app/Gemfile
+COPY ../Gemfile.lock /app/Gemfile.lock
 RUN bundle install
-COPY . /app
+COPY ../app /app
