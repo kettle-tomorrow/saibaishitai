@@ -17,6 +17,8 @@ COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /app
 
+RUN bundle exec rails assets:precompile
+
 # FROM ruby:3.0.1
 
 # WORKDIR /app
