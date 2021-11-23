@@ -7,8 +7,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 
 RUN apt-get update && apt-get install -y \
       git \
-      nodejs \
-      vim
+      nodejs
 
 RUN npm install -g yarn
 
@@ -17,7 +16,7 @@ COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /app
 
-RUN bundle exec rails assets:precompile
+RUN SECRET_KEY_BASE=dummy bundle exec rails assets:precompile
 
 # FROM ruby:3.0.1
 
