@@ -57,3 +57,4 @@ production:
   database: saibaishitai_production
   username: saibaishitai
   password: <%= ENV['SAIBAISHITAI_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
