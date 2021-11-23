@@ -15,7 +15,7 @@ RUN npm install -g yarn
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
-COPY app /app
+COPY . /app
 
 # FROM ruby:3.0.1
 
